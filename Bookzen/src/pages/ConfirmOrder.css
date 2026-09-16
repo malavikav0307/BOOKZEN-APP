@@ -1,0 +1,284 @@
+.confirm-order-page {
+  min-height: 100vh;
+  background: #fff7f8;
+  padding: 25px 20px 90px;
+  box-sizing: border-box;
+}
+
+.confirm-order-page .back-button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #ffe1e5;
+  color: #fd6569;
+  font-size: 24px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-order-page h1 {
+  margin: 25px 0 20px;
+  color: #fd6569;
+}
+
+
+/* =========================
+   BOOK CARD
+========================= */
+
+.confirm-book-card {
+  background: white;
+  padding: 15px;
+  border-radius: 18px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(253, 101, 105, 0.1);
+}
+
+.confirm-book-card img {
+  width: 90px;
+  height: 115px;
+  object-fit: contain;
+  background: #fff7f8;
+  border-radius: 10px;
+}
+
+.confirm-book-card h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #333;
+}
+
+.confirm-book-card p {
+  margin: 0 0 8px;
+  color: #777;
+  font-size: 13px;
+}
+
+.confirm-book-card h3 {
+  margin: 0;
+  color: #fd6569;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.confirm-section {
+  background: white;
+  margin-top: 15px;
+  padding: 16px;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(253, 101, 105, 0.07);
+}
+
+.confirm-section h3 {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+.confirm-section p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+
+/* =========================
+   CONFIRM BUTTON
+========================= */
+
+.confirm-order-button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  background: #fd6569;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.confirm-order-button:hover {
+  background: #f65358;
+}
+
+
+/* =========================
+   SUCCESS OVERLAY
+========================= */
+
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  z-index: 9999;
+}
+
+
+/* =========================
+   SUCCESS POPUP
+========================= */
+
+.success-popup {
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  background: white;
+  border-radius: 24px;
+  padding: 25px 20px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+  animation: popupOpen 0.3s ease;
+}
+
+@keyframes popupOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================
+   SUCCESS ICON
+========================= */
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+  background: #e8f8ed;
+  color: #219653;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.success-popup h2 {
+  margin: 0 0 20px;
+  color: #219653;
+  font-size: 21px;
+}
+
+
+/* =========================
+   SUCCESS BOOK
+========================= */
+
+.success-book {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-align: left;
+
+  background: #fff7f8;
+  padding: 12px;
+  border-radius: 14px;
+}
+
+.success-book img {
+  width: 65px;
+  height: 80px;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
+}
+
+.success-book h3 {
+  margin: 0 0 6px;
+  color: #333;
+  font-size: 15px;
+}
+
+.success-book p {
+  margin: 0;
+  color: #fd6569;
+  font-weight: bold;
+}
+
+
+/* =========================
+   ADDRESS
+========================= */
+
+.success-address {
+  margin-top: 15px;
+
+  background: #fff7f8;
+  padding: 15px;
+  border-radius: 14px;
+
+  text-align: left;
+}
+
+.success-address h3 {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+.success-address p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 13px;
+}
+
+
+/* =========================
+   SUCCESS BUTTON
+========================= */
+
+.success-ok-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+
+  border: none;
+  border-radius: 13px;
+
+  background: #fd6569;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.success-ok-button:hover {
+  background: #f65358;
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BOOKZEN</string>
+    <string name="title_activity_main">BOOKZEN</string>
+    <string name="package_name">com.bookzen.app</string>
+    <string name="custom_url_scheme">com.bookzen.app</string>
+</resources>

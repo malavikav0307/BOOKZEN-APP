@@ -1,0 +1,708 @@
+.profile-page {
+  min-height: 100vh;
+  background: #fff7f8;
+  padding: 20px;
+  padding-bottom: 90px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.profile-page .back-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #ffe1e5;
+  color: #fd6569;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.profile-page .back-button:hover {
+  background: #ffd5da;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.profile-page h1 {
+  margin: 18px 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 14px rgba(253, 101, 105, 0.08);
+  border: 1px solid #ffd5da;
+}
+
+.profile-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ffe1e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.profile-user-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.profile-detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-detail-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-user-name {
+  margin: 1px 0 0 !important;
+  color: #222 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-user-email {
+  margin: 1px 0 0 !important;
+  color: #666 !important;
+  font-size: 13px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-edit-name-btn {
+  background: #fff0f2;
+  border: 1px solid #ffd5da;
+  color: #fd6569;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.profile-edit-name-btn:hover {
+  background: #ffe1e5;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.profile-section {
+  margin-top: 25px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title h2 {
+  margin: 0 0 15px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.section-title span {
+  background: #fd6569;
+  color: white;
+  min-width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* =========================
+   PAYMENT / UPI QR SECTION
+========================= */
+
+.profile-payment-card {
+  background: white;
+  border: 1px solid #ffd5da;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(253, 101, 105, 0.06);
+}
+
+.payment-card-desc {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.profile-qr-display {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff8f9;
+  border: 1px dashed #fd6569;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.profile-qr-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #ffe1e5;
+  padding: 4px;
+}
+
+.profile-qr-actions {
+  flex: 1;
+}
+
+.profile-qr-status {
+  display: inline-block;
+  color: #2e7d32;
+  font-size: 12px;
+  font-weight: 600;
+  background: #e8f5e9;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.profile-qr-btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.qr-action-btn {
+  border: none;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.qr-action-btn.replace {
+  background: #fd6569;
+  color: white;
+}
+
+.qr-action-btn.replace:hover {
+  background: #f65358;
+}
+
+.qr-action-btn.delete {
+  background: #fff;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
+.qr-action-btn.delete:hover {
+  background: #ffebee;
+}
+
+.profile-qr-upload-box {
+  background: #fff8f9;
+  border: 2px dashed #fd6569;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: background 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.profile-qr-upload-box:hover {
+  background: #ffebee;
+}
+
+.upload-qr-icon {
+  font-size: 28px;
+}
+
+.profile-qr-upload-box strong {
+  font-size: 14px;
+  color: #333;
+}
+
+.profile-qr-upload-box span {
+  font-size: 12px;
+  color: #888;
+}
+
+.profile-upi-input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.upi-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.upi-input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ffd5da;
+  border-radius: 10px;
+  font-size: 13px;
+  outline: none;
+  font-family: inherit;
+}
+
+.upi-input-row input:focus {
+  border-color: #fd6569;
+  box-shadow: 0 0 0 2px rgba(253, 101, 105, 0.15);
+}
+
+.save-upi-btn {
+  background: #fd6569;
+  color: white;
+  border: none;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.save-upi-btn:hover {
+  background: #f65358;
+}
+
+/* =========================
+   NO BOOKS
+========================= */
+
+.no-books {
+  text-align: center;
+  color: #999;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+/* =========================
+   BOOK LIST
+========================= */
+
+.my-books-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* =========================
+   BOOK CARD
+========================= */
+
+.my-book-card {
+  background: #fff0f2;
+  border: 1px solid #ffd5da;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  gap: 12px;
+  box-shadow: 0 3px 10px rgba(253, 101, 105, 0.08);
+}
+
+/* =========================
+   BOOK IMAGE
+========================= */
+
+.my-book-card img {
+  width: 85px;
+  height: 110px;
+  object-fit: cover;
+  background: white;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   BOOK INFO
+========================= */
+
+.my-book-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.my-book-info h3 {
+  margin: 2px 0 5px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.my-book-info p {
+  margin: 0 0 7px;
+  color: #777;
+  font-size: 12px;
+}
+
+.my-book-info strong {
+  display: block;
+  color: #fd6569;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* =========================
+   BUTTON CONTAINER
+========================= */
+
+.my-book-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   VIEW BOOK BUTTON
+========================= */
+
+.view-book-button {
+  border: none;
+  background: #fd6569;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.view-book-button:hover {
+  background: #f65358;
+}
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-book-button {
+  border: none;
+  background: #ffffff;
+  color: #e53935;
+  border: 1px solid #e53935;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.delete-book-button:hover {
+  background: #e53935;
+  color: white;
+}
+
+/* =========================
+   PROFILE OPTION
+========================= */
+
+.profile-option {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ffd5da;
+  border-radius: 14px;
+  background: #fff0f2;
+  color: #fd6569;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.profile-option:hover {
+  background: #ffe1e5;
+}
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout-button {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ffd5da;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #fd6569;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(253, 101, 105, 0.08);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #fff0f2;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   EDIT NAME MODAL
+========================= */
+
+.edit-name-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.edit-name-modal {
+  background: white;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ffd5da;
+  box-sizing: border-box;
+  animation: modalPopIn 0.25s ease-out;
+}
+
+@keyframes modalPopIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.edit-name-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.edit-name-header h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  color: #222;
+}
+
+.edit-name-close-btn {
+  background: #ffe1e5;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fd6569;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.edit-name-desc {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.edit-name-error-banner {
+  background: #ffebee;
+  color: #d32f2f;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ffcdd2;
+}
+
+.edit-name-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edit-name-input-wrap label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.edit-name-input-wrap input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #ffd5da;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: #333;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.edit-name-input-wrap input:focus {
+  border-color: #fd6569;
+  box-shadow: 0 0 0 2px rgba(253, 101, 105, 0.15);
+}
+
+.edit-name-actions-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.edit-name-cancel-btn {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-name-cancel-btn:hover {
+  background: #f5f5f5;
+}
+
+.edit-name-save-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #fd6569;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(253, 101, 105, 0.3);
+  transition: all 0.2s ease;
+}
+
+.edit-name-save-btn:hover:not(:disabled) {
+  background: #f65358;
+}
+
+.edit-name-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 16px;
+    padding-bottom: 90px;
+  }
+
+  .my-book-card {
+    padding: 9px;
+  }
+
+  .my-book-card img {
+    width: 80px;
+    height: 105px;
+  }
+
+  .seller-chat-button,
+  .delete-book-button {
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+}

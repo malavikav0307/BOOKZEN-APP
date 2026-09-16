@@ -1,0 +1,316 @@
+
+.delivery-page {
+  min-height: 100vh;
+  background: #fff7f8;
+  padding: 25px 20px 90px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.delivery-page .back-button {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ffe1e5;
+  color: #fd6569;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  transition: 0.2s ease;
+}
+
+.delivery-page .back-button:hover {
+  background: #fd6569;
+  color: white;
+  transform: translateX(-2px);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.delivery-page h1 {
+  margin: 0 0 20px;
+  color: #fd6569;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.delivery-page form {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+
+  box-shadow: 0 4px 15px rgba(253, 101, 105, 0.08);
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.delivery-page .form-group {
+  margin-bottom: 14px;
+}
+
+.delivery-page label {
+  display: block;
+  margin-bottom: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.delivery-page input {
+  width: 100%;
+  height: 46px;
+
+  padding: 0 14px;
+  margin-bottom: 0;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ffd5da;
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 14px;
+  color: #333;
+
+  background: #fffafb;
+
+  transition: 0.2s ease;
+}
+
+.delivery-page input:focus {
+  border-color: #fd6569;
+  background: white;
+
+  box-shadow: 0 0 0 3px rgba(253, 101, 105, 0.08);
+}
+
+/* =========================
+   QUANTITY SECTION
+========================= */
+
+.quantity-section {
+  margin-top: 18px;
+  margin-bottom: 20px;
+
+  padding: 14px;
+
+  background: #fff7f7;
+  border: 1px solid #ffdede;
+  border-radius: 12px;
+}
+
+.quantity-section label {
+  display: block;
+  margin-bottom: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.quantity-section input {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  background: #fff;
+
+  font-size: 15px;
+  color: #333;
+
+  outline: none;
+}
+
+.quantity-section input:focus {
+  border-color: #fd6569;
+  box-shadow: 0 0 0 2px rgba(253, 101, 105, 0.1);
+}
+
+/* =========================
+   AVAILABLE STOCK
+========================= */
+
+.available-stock {
+  display: block;
+
+  margin-top: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #2e7d32;
+}
+
+/* =========================
+   QUANTITY ERROR
+========================= */
+
+.quantity-error {
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #d32f2f;
+}
+
+/* =========================
+   CONTINUE BUTTON
+========================= */
+
+.delivery-page .continue-button {
+  width: 100%;
+
+  min-height: 50px;
+
+  padding: 15px 18px;
+  margin-top: 8px;
+
+  border: none;
+  border-radius: 13px;
+
+  background: #fd6569;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delivery-page .continue-button:hover {
+  background: #f65358;
+  transform: translateY(-1px);
+}
+
+.delivery-page .continue-button:active {
+  transform: translateY(0);
+}
+
+/* Disabled */
+
+.delivery-page .continue-button:disabled {
+  background: #cccccc;
+  color: #ffffff;
+
+  cursor: not-allowed;
+
+  opacity: 0.7;
+
+  transform: none;
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+  .delivery-page {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .delivery-page {
+    padding: 20px 15px 80px;
+  }
+
+  .delivery-page .back-button {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .delivery-page h1 {
+    font-size: 23px;
+    margin-bottom: 16px;
+  }
+
+  .delivery-page form {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .delivery-page label {
+    font-size: 13px;
+  }
+
+  .delivery-page input {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .quantity-section {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .quantity-section label {
+    font-size: 13px;
+  }
+
+  .quantity-section input {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .available-stock {
+    font-size: 12px;
+  }
+
+  .delivery-page .continue-button {
+    min-height: 48px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,138 @@
+/* =========================
+   BOTTOM NAVBAR
+========================= */
+
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  border-top: 1px solid #f7d8dc;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1000;
+  pointer-events: auto;
+  box-shadow: 0 -3px 15px rgba(253, 101, 105, 0.08);
+}
+
+/* =========================
+   NAV BUTTONS
+========================= */
+
+.bottom-navbar button {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #777777;
+  font-size: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  font-family: inherit;
+}
+
+.bottom-navbar button svg {
+  font-size: 20px;
+}
+
+.bottom-navbar button.active {
+  color: #fd6569;
+  font-weight: 600;
+}
+
+.bottom-navbar button.active svg {
+  color: #fd6569;
+}
+
+/* =========================
+   NORMAL BUTTON HOVER
+========================= */
+
+.bottom-navbar button:hover {
+  transform: scale(1.08);
+  color: #fd6569;
+}
+
+/* =========================
+   SELL BUTTON
+========================= */
+
+.bottom-navbar .sell-button {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+  width: 48px;
+  height: 48px;
+  margin-top: -22px;
+  border: none;
+  border-radius: 50%;
+  background: #fd6569;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(253, 101, 105, 0.3);
+  transition: transform 0.2s ease;
+}
+
+/* PLUS ICON */
+
+.bottom-navbar .sell-button svg {
+  font-size: 20px !important;
+  color: #ffffff;
+}
+
+/* SELL TEXT */
+
+.bottom-navbar .sell-button span {
+  font-size: 9px;
+  color: #ffffff;
+}
+
+/* SELL HOVER */
+
+.bottom-navbar .sell-button:hover {
+  transform: scale(1.06);
+  background: #fd6569;
+  color: #ffffff;
+}
+
+.bottom-navbar .sell-button:hover svg {
+  color: #ffffff;
+}
+
+.bottom-navbar .sell-button:hover span {
+  color: #ffffff;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .bottom-navbar {
+    height: 68px;
+  }
+
+  .bottom-navbar button {
+    font-size: 11px;
+  }
+
+  .bottom-navbar button svg {
+    font-size: 19px;
+  }
+
+  .bottom-navbar .sell-button {
+    width: 48px;
+    height: 48px;
+  }
+}

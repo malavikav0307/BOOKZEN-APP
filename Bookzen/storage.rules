@@ -1,0 +1,54 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper function to validate image uploads
+    function isValidImage() {
+      return request.resource.size < 10 * 1024 * 1024 &&
+        (request.resource.contentType.matches('image/.*') ||
+         request.resource.contentType == 'application/octet-stream');
+    }
+
+    // User Profile storage
+    match /users/{userId}/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Book photos:
+    // - Publicly readable
+    // - Authenticated seller can upload and delete own book images
+    match /books/{userId}/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Chat Media / Payment Screenshots:
+    // - Readable by authenticated users
+    // - Authenticated users can upload screenshots/images up to 10MB
+    match /chatMedia/{chatId}/{allPaths=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && isValidImage();
+    }
+
+    // Chat Images (Unified Conversation Messaging System):
+    // - Authenticated users can read chat images
+    // - Authenticated users can upload their own images up to 10MB
+    match /chatImages/{conversationId}/{userId}/{allPaths=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && request.auth.uid == userId && isValidImage();
+    }
+
+    // Fallback for general authenticated user uploads
+    match /{allPaths=**} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+  }
+}
+

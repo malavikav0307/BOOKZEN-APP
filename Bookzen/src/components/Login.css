@@ -1,0 +1,122 @@
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background: #fff7f7;
+  text-align: center;
+}
+
+.login-page h1 {
+  margin: 0;
+  color: #fd6569;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.login-page .tagline {
+  margin: 8px 0 30px;
+  color: #777;
+  font-size: 15px;
+}
+
+.login-page form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-page input {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.login-page input:focus {
+  border-color: #fd6569;
+}
+
+.login-page button {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* LOGIN */
+
+.login-page .login-btn {
+  margin-top: 5px;
+  border: none;
+  background: #fd6569;
+  color: white;
+}
+
+/* CREATE ACCOUNT */
+
+.login-page .signup-btn {
+  display: block;
+  margin: 15px auto 0;
+  border: 1px solid #fd6569;
+  background: white;
+  color: #fd6569;
+}
+
+/* OR */
+
+.login-page .or {
+  margin: 20px 0;
+  color: #888;
+  font-size: 14px;
+}
+
+/* GOOGLE */
+
+.login-page .google-btn {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  background: white;
+  color: #333;
+}
+
+/* HOVER */
+
+.login-page .login-btn:hover {
+  background: #e9565b;
+}
+
+.login-page .signup-btn:hover {
+  background: #fff0f0;
+}
+
+.login-page .google-btn:hover {
+  background: #f8f8f8;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+  .login-page {
+    padding: 40px 20px;
+  }
+
+  .login-page h1 {
+    font-size: 28px;
+  }
+
+}

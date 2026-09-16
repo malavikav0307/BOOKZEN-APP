@@ -1,0 +1,659 @@
+
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff7f7;
+  color: #333333;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================
+   SPLASH SCREEN
+========================================= */
+
+.splash {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  background: #f8dde3;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  text-align: center;
+}
+
+.splash h1 {
+  font-size: 58px;
+
+  color: #ff4d79;
+
+  letter-spacing: 4px;
+
+  font-weight: 700;
+}
+
+.splash p {
+  color: #777777;
+
+  margin-top: 10px;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   LOGIN / SIGNUP CONTAINER
+========================================= */
+
+.container {
+  width: 380px;
+
+  max-width: 95%;
+
+  margin: 70px auto;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  padding: 35px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.10);
+
+  box-sizing: border-box;
+}
+
+.container h1 {
+  text-align: center;
+
+  color: #ff4d79;
+
+  font-size: 28px;
+
+  font-weight: 700;
+}
+
+.tagline {
+  text-align: center;
+
+  color: #777777;
+
+  margin: 10px 0 30px;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.container input {
+  width: 100%;
+
+  padding: 15px;
+
+  border: 1px solid #f1cdcd;
+
+  border-radius: 12px;
+
+  margin-bottom: 18px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #333333;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.container input::placeholder {
+  color: #999999;
+}
+
+.container input:focus {
+  border-color: #ff4d79;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 77, 121, 0.10);
+}
+
+
+/* =========================================
+   LOGIN / SIGNUP BUTTONS
+========================================= */
+
+.login-btn,
+.signup-btn,
+.google-btn {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  margin-bottom: 15px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.login-btn {
+  background: #ff4d79;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 12px rgba(255, 77, 121, 0.20);
+}
+
+.signup-btn {
+  background: #ff4d79;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 12px rgba(255, 77, 121, 0.20);
+}
+
+.google-btn {
+  background: #ffffff;
+
+  color: #444444;
+
+  border: 1px solid #eccece;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.login-btn:hover,
+.signup-btn:hover,
+.google-btn:hover {
+  transform: translateY(-2px);
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  background: #f43f6d;
+
+  box-shadow:
+    0 8px 18px rgba(255, 77, 121, 0.25);
+}
+
+.google-btn:hover {
+  background: #fff7f7;
+}
+
+
+/* =========================================
+   OR
+========================================= */
+
+.or {
+  text-align: center;
+
+  margin: 15px 0;
+
+  color: #666666;
+
+  font-weight: 600;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   HOME
+========================================= */
+
+.home {
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: #fff7f7;
+
+  padding-bottom: 40px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  width: 100%;
+
+  background: #eb587d;
+
+  color: #ffffff;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 22px;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+.header-icons {
+  display: flex;
+
+  gap: 18px;
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* =========================================
+   SECTION TITLE - COMMON
+========================================= */
+
+.section-title {
+  color: #333333;
+
+  font-weight: 700;
+}
+
+
+/*
+   Home page section title is controlled
+   more specifically inside Home.css.
+*/
+
+
+/* =========================================
+   CATEGORIES - COMMON
+========================================= */
+
+.categories {
+  display: flex;
+
+  gap: 12px;
+
+  overflow-x: auto;
+
+  padding: 0 20px 20px;
+
+  scrollbar-width: none;
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.categories button {
+  border: none;
+
+  background: #eb587d;
+
+  color: #ffffff;
+
+  border-radius: 30px;
+
+  padding: 12px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.categories button:hover {
+  background: #ee7c99;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HOME CONTAINER
+========================================= */
+
+.home-container {
+  width: 100%;
+
+  padding-bottom: 90px;
+}
+
+
+/* =========================================
+   COMMON PAGE
+========================================= */
+
+.page {
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 20px;
+
+  padding-bottom: 110px;
+
+  background: #fff7f7;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media screen and (min-width: 768px) {
+
+  .container {
+    margin: 80px auto;
+  }
+
+  /*
+     Keep old search wrapper responsive.
+  */
+
+  
+
+  .categories {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+  .splash h1 {
+    font-size: 42px;
+
+    letter-spacing: 3px;
+  }
+
+  .splash p {
+    font-size: 16px;
+  }
+
+  .container {
+    width: calc(100% - 30px);
+
+    max-width: 380px;
+
+    margin: 35px auto;
+
+    padding: 25px 20px;
+
+    border-radius: 18px;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .tagline {
+    margin-bottom: 25px;
+  }
+
+  .container input {
+    padding: 13px;
+
+    font-size: 14px;
+  }
+
+  .login-btn,
+  .signup-btn,
+  .google-btn {
+    padding: 13px;
+
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .header-icons {
+    gap: 12px;
+
+    font-size: 20px;
+  }
+
+  .page {
+    padding: 15px;
+
+    padding-bottom: 110px;
+  }
+}
+
+
+
+.categories-section,
+.latest-books-section {
+  margin: 25px 20px;
+}
+
+.categories-section h2,
+.latest-books-section h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 20px;
+}
+
+
+/* CATEGORY HORIZONTAL SCROLL */
+
+.categories-scroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 5px 2px 12px;
+  scrollbar-width: none;
+}
+
+.categories-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.category-item {
+  min-width: 105px;
+  height: 95px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #555;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.category-item:hover {
+  transform: translateY(-2px);
+}
+
+.category-icon {
+  font-size: 28px;
+}
+
+
+/* LATEST BOOKS */
+
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.book-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.book-card-image {
+  width: 100%;
+  height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffe1e5;
+
+  font-size: 50px;
+}
+
+.book-card-content {
+  padding: 12px;
+}
+
+.book-card-content h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.book-card-content p {
+  font-size: 12px;
+  color: #777;
+  margin: 3px 0;
+}
+
+.book-card-content h4 {
+  margin-top: 8px;
+  color: #fd6569;
+  font-size: 16px;
+}
+
+.no-books {
+  color: #777;
+  font-size: 14px;
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+
+  .book-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .categories-section,
+  .latest-books-section {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}

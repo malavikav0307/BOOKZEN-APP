@@ -1,0 +1,135 @@
+.categories-page {
+  min-height: 100vh;
+
+  background: #fff7f8;
+
+  padding: 25px 20px 90px;
+}
+
+
+/* BACK BUTTON */
+
+.categories-page .back-button {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ffe1e5;
+  color: #fd6569;
+
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.categories-page .back-button:hover {
+  transform: scale(1.08);
+}
+
+
+/* TITLE */
+
+.categories-page h1 {
+  margin: 25px 0;
+
+  color: #fd6569;
+
+  font-size: 26px;
+
+  text-align: center;
+}
+
+
+/* CATEGORY GRID */
+
+.category-container {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+
+/* CATEGORY CARD */
+
+.category-card {
+  height: 130px;
+
+  border: 1px solid #f9dadd;
+
+  border-radius: 18px;
+
+  background: #fff0f2;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 12px rgba(253, 101, 105, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+
+  background: #ffe8eb;
+}
+
+
+/* ICON */
+
+.category-page-icon {
+  font-size: 40px;
+}
+
+
+/* NAME */
+
+.category-page-name {
+  color: #555;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+
+  .categories-page {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .category-container {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+  }
+
+  .category-card {
+    height: 150px;
+  }
+
+}

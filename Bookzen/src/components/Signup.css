@@ -1,0 +1,89 @@
+.signup-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background: #fff7f7;
+  text-align: center;
+}
+
+.signup-page h1 {
+  margin: 0;
+  color: #fd6569;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.signup-tagline {
+  margin: 8px 0 30px;
+  color: #777;
+  font-size: 15px;
+}
+
+.signup-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-form input {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.signup-form input:focus {
+  border-color: #fd6569;
+}
+
+.signup-form button {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.create-account-btn {
+  margin-top: 5px;
+  border: none;
+  background: #fd6569;
+  color: white;
+}
+
+.back-login-btn {
+  border: 1px solid #fd6569;
+  background: white;
+  color: #fd6569;
+}
+
+.create-account-btn:hover {
+  background: #e9565b;
+}
+
+.back-login-btn:hover {
+  background: #fff0f0;
+}
+
+@media (max-width: 480px) {
+
+  .signup-page {
+    padding: 40px 20px;
+  }
+
+  .signup-page h1 {
+    font-size: 28px;
+  }
+
+}
