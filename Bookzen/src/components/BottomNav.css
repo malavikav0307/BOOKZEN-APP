@@ -7,6 +7,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw;
   height: 70px;
   background: #ffffff;
   border-top: 1px solid #f7d8dc;
@@ -16,6 +17,8 @@
   z-index: 1000;
   pointer-events: auto;
   box-shadow: 0 -3px 15px rgba(253, 101, 105, 0.08);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* =========================
@@ -35,6 +38,16 @@
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
   font-family: inherit;
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.bottom-navbar button span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .bottom-navbar button svg {
@@ -69,6 +82,7 @@
   pointer-events: auto;
   width: 48px;
   height: 48px;
+  flex: 0 0 48px;
   margin-top: -22px;
   border: none;
   border-radius: 50%;
@@ -82,6 +96,7 @@
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(253, 101, 105, 0.3);
   transition: transform 0.2s ease;
+  box-sizing: border-box;
 }
 
 /* PLUS ICON */
@@ -134,5 +149,6 @@
   .bottom-navbar .sell-button {
     width: 48px;
     height: 48px;
+    flex: 0 0 48px;
   }
 }

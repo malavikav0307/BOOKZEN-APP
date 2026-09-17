@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./CategoryBooks.css";
-
 import { db } from "../firebase";
 import { collection, onSnapshot } from "firebase/firestore";
 
@@ -71,58 +70,115 @@ function CategoryBooks({
 
   return (
     <div className="category-books-page">
-      {/* BACK */}
-      <button
-        type="button"
-        className="back-button"
-        onClick={handleBack}
-        title="Back to Categories"
-      >
-        ←
-      </button>
+      {/* HEADER */}
+      <header className="category-books-header">
+        <button
+          type="button"
+          className="back-button"
+          onClick={handleBack}
+          title="Back to Categories"
+          aria-label="Back"
+        >
+          ←
+        </button>
 
-      {/* TITLE */}
-      <h1>{category} Books</h1>
+        <h1>{category} Books</h1>
+      </header>
 
-      {/* LOADING */}
-      {loading ? (
-        <p className="no-books">Loading books...</p>
-      ) : filteredBooks.length === 0 ? (
-        <p className="no-books">No books available in this category.</p>
-      ) : (
-        <div className="book-container">
-          {filteredBooks.map((book) => (
-            <div
-              className="book-card"
-              key={book.id}
-              onClick={() => openBook(book)}
-            >
-              {/* IMAGE */}
-              <div className="book-card-image">
-                <img
-                  src={
-                    book.frontCover ||
-                    book.frontImage ||
-                    book.image ||
-                    ""
-                  }
-                  alt={book.bookName || book.title || "Book"}
-                />
-              </div>
+      {/* CONTENT */}
+      <main className="category-books-content">
+        {/* LOADING */}
+        {loading ? (
+          <p className="no-books">Loading books...</p>
+        ) : filteredBooks.length === 0 ? (
+          <p className="no-books">No books available in this category yet.</p>
+        ) : (
+          <div className="book-container">
+            {filteredBooks.map((book) => {
+              const coverImage =
+                book.frontCover ||
+                book.frontImage ||
+                book.image ||
+                (Array.isArray(book.images) && book.images[0]?.url
+                  ? book.images[0].url
+                  : Array.isArray(book.images) && typeof book.images[0] === "string"
+                  ? book.images[0]
+                  : "");
 
-              {/* DETAILS */}
-              <div className="book-card-content">
-                <h3>{book.bookName || book.title}</h3>
-                <p>{book.author}</p>
-                <p>
-                  {book.category} {book.condition ? `• ${book.condition}` : ""}
-                </p>
-                <h4>₹{book.price}</h4>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+              const title = book.bookName || book.title || "Untitled Book";
+              const author = book.author || "Unknown Author";
+
+              return (
+                <div
+                  className="book-card"
+                  key={book.id}
+                  onClick={() => openBook(book)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      openBook(book);
+                    }
+                  }}
+                >
+                  {/* BOOK IMAGE CONTAINER */}
+                  <div className="book-card-image">
+                    {coverImage ? (
+                      <img src={coverImage} alt={title} loading="lazy" />
+                    ) : (
+                      <div className="book-card-no-img">
+                        <span>📚</span>
+                      </div>
+                    )}
+
+                    {/* CONDITION BADGE OVERLAY */}
+                    {book.condition && (
+                      <span
+                        className={`card-condition-pill cond-${(book.condition || "")
+                          .toLowerCase()
+                          .replace(/\s+/g, "-")}`}
+                      >
+                        {book.condition}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* BOOK DETAILS CONTENT */}
+                  <div className="book-card-content">
+                    <h3 className="book-card-title" title={title}>
+                      {title}
+                    </h3>
+
+                    <p className="book-card-author">by {author}</p>
+
+                    <div className="book-card-meta-row">
+                      {book.category && (
+                        <span className="book-card-category-tag">
+                          {book.category}
+                        </span>
+                      )}
+                      {book.edition && (
+                        <span className="book-card-edition-tag">
+                          {book.edition}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="book-card-footer">
+                      <div className="book-card-price">
+                        <span className="currency-symbol">₹</span>
+                        <span className="price-num">{book.price || 0}</span>
+                      </div>
+                      <span className="book-card-view-btn">View</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </main>
     </div>
   );
 }

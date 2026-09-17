@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,10 +10,14 @@ html,
 body,
 #root {
   width: 100%;
+  max-width: 100%;
   min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
 }
